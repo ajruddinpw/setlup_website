@@ -1,0 +1,793 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+
+
+/* ---------- NAVBAR ---------- */
+
+.custom-navbar {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  border-radius: 60px;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: auto;
+  max-width: 95%;
+  margin-top: -100px;
+}
+
+/* Logo styling */
+.logo {
+  height: 30px;
+}
+
+/* Brand text */
+.brand-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0070c9;
+}
+
+/* Arrow-styled 'L' in SetLUp */
+.logo-arrow {
+  color: #0070c9;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+/* Get Started button styling */
+.btn-primary {
+  background-color: #0066b2;
+}
+
+.btn-primary:hover {
+  background-color: #005da0;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero-section {
+  min-height: 90vh; /* Reduced height */
+  padding: 100px 10px 40px 10px; /* Adjusted top, bottom, left, right */
+  background-color: #0e1b3f;
+  background-image: url('/images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Text */
+.hero-section h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Image (background layer) */
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -60%);
+  z-index: 1;
+  width: 120%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Laptop image */
+.laptop-img {
+  position: relative;
+  bottom: 30px;
+  right: 52px;
+  width: 110%;
+  margin-top: 50px;
+
+  max-width: 500px;
+  z-index: 2;
+}
+
+/* Mobile Image
+.mobile-img {
+  width: 140px;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  z-index: 3; 
+}*/ 
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    top: 15px;
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+
+  .hero-section {
+    padding: 80px 10px 30px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .mobile-img {
+    width: 100px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laptop-img {
+    max-width: 280px;
+    right: 30px;
+  }
+
+  .mobile-img {
+    width: 80px;
+    bottom: -10px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 50%;
+    padding: 3px;
+  }
+
+  .brand-text {
+    font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .brand-text {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-nav .nav-link {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+
+    /* Brand Marquee Section */
+
+  .brand-marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .brand-marquee {
+    animation: scrollLeft 25s linear infinite;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .brand-logo {
+    height: 40px;
+    flex: 0 0 auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+  
+  .brand-logo:hover {
+    filter: grayscale(0%);
+  }
+  
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Community Heading Section */
+.community-heading {
+    background-color: #f9f9f9; /* Optional: Light background */
+  }
+  
+  .community-heading h2 {
+    font-size: 1.8rem;
+  }
+  
+  @media (min-width: 576px) {
+    .community-heading h2 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .community-heading h2 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .community-heading h2 {
+      font-size: 3rem;
+    }
+  }
+  
+  .text-primary {
+    color: #6C63FF !important; /* Adjust this to match your brand color */
+  }
+  
+
+   /* Extend your existing feature box styling */
+.feature-box {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 2rem 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Image inside box */
+.feature-box img {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  max-height: 160px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Heading styles */
+.feature-box h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.feature-box .btn {
+  background: white;
+  color: #000;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.feature-box .btn:hover {
+  background: #f0f0f0;
+}
+
+/* Media Queries for Responsive Typography */
+@media (min-width: 480px) {
+  .feature-box h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-box h5 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .feature-box h5 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1281px) {
+  .feature-box h5 {
+    font-size: 1.35rem;
+  }
+}
+
+/* b2b Section */
+.b2b-section {
+  background-color: #fefefe;
+}
+
+.phone-img {
+  max-width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.feature-item {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Responsive stacking on mobile */
+@media (max-width: 767.98px) {
+  .feature-item {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .feature-icon {
+    margin-bottom: 8px;
+  }
+
+  .feature-item span {
+    display: block;
+  }
+}
+
+/* brands Section */
+.brands-section {
+  background-color: #fff;
+}
+
+/* Rocket Image */
+.rocket-img {
+  max-width: 300px;
+}
+ 
+/* Circle Icon + Number */
+.icon-box {
+  padding: 95px 84px 72px 83px; /* top, right, bottom, left */
+  position: relative
+                                 
+}
+
+.icon-circle {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.icon-circle img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  
+}
+
+/* Number Badge */
+.number-badge {
+  position: absolute;
+  top: 82px;
+  left: 82px;
+  background-color: #5e50fa;
+  color: #fff;
+  font-size: 0.70rem;
+  font-weight: 600;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .rocket-img {
+    max-width: 200px;
+  }
+
+  .icon-box {
+    padding: 60px 30px;
+    top:-50px;
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+  
+  }
+
+  .icon-circle img {
+    width: 40px;
+    height: 40px;
+    
+    
+  }
+
+  .number-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+    top: 50px;
+    left: 30px;
+  }
+}
+/* How It Works Section */
+.icon-wrapper {
+  /* width: 50px;
+  height: 50px;
+  background-color: #f0f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+
+  background-color: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .how-it-works h2 {
+    font-size: 1.5rem;
+  }
+  .how-it-works p.lead {
+    font-size: 1rem;
+  }
+}
+
+/* ===============================
+   Feature Section Styles
+   =============================== */
+
+.feature-section {
+  background-color: #fff;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.right-img {
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .right-img {
+    max-width: 80%;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+  .feature-desc {
+    font-size: 0.875rem;
+  }
+}
+
+.ellipse{
+  margin-left:40px;
+  width:50px;
+  height:50px;
+}
+
+.feature-icon{
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+/*_______________*/
+.section-scale {
+  background: linear-gradient(135deg, #5a30f0, #4a00e0);
+  color: white;
+  padding: 8px 5px;
+  border-radius: 20px;
+  margin:0 20px
+}
+
+.section-scale h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.section-scale p {
+  font-size: 1.25rem;
+  margin: 20px 0;
+}
+
+.section-scale .btn {
+  background-color: white;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.section-scale .btn:hover {
+  background-color: #eee;
+}
+
+.image-col img {
+  width: 100%;
+  max-width: 350px;
+}
+
+
+/*-------------------*/
+
+.retailer{
+  outline: none;
+  border:none;
+}
+
+ 
+/* ===  OUR REACH SECTION  === */
+ 
+
+  /* ===  SECTION WITH BACKGROUND  === */
+.our-reach-section {
+  background: url("/images/Rectangle 51.png") no-repeat center top / 1540px 268px;  /* fixed background width & height */
+  min-height: 268px;  /* to ensure background is not cut off on small screens */
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 180px; /* top padding for positioning the card */
+  padding-left: 87px;
+  padding-right: 86px;
+  text-align: center;
+}
+
+/* ===  SECTION TITLE  === */
+.our-reach-section h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  position: absolute;
+  top: 40px; /* title position */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 1;
+}
+
+/* ===  WHITE CARD  === */
+.reach-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 1267px;  /* fixed width */
+  height: 274px;  /* fixed height */
+  padding: 41px 53px;  /* padding top, right, bottom, left */
+  position: absolute;
+  top: 135px;  /* specific top position */
+  left: 87px;  /* specific left position */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===  RESPONSIVE TWEAKS  === */
+@media (max-width: 991.98px) {
+  .our-reach-section {
+    padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .our-reach-section h2 {
+    font-size: 28px;
+    top: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .our-reach-section {
+    padding-top: 100px;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: 250px;
+  }
+  .our-reach-section h2 {
+    font-size: 22px;
+    top: 20px;
+  }
+  .reach-card {
+    border-radius: 12px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    position: relative;  /* reset absolute positioning for small screens */
+  }
+}
+
+/* === testimonial section  === */
+
+.card{
+  padding: 0 5px;
+}
+
+
+ .testimonial-section {
+  margin-top: 120px;
+  background-color: #f8f9fa;
+  border-radius: 50px;
+}
+
+.testimonial-scroll {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.testimonial-scroll .card {
+  scroll-snap-align: start;
+}
+
+/* Decorative Dots */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.dot.bg-primary {
+  opacity: 1;
+}
+
+
+/* faq section */
+.faq-section {
+  background: #fff;
+   
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.faq-image {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.accordion-button::after {
+  background-image: none;
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "×";
+}
+
+.accordion-button {
+  font-weight: 500;
+  font-size: 1.5rem;
+  border: none;
+   
+  color: #0070c9;
+   
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #252f3f;
+}
+
+.footer-link {
+  color: #b0b8c3;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #6366f1;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #4f46e5;
+}
