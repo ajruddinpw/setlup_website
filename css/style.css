@@ -1,11 +1,12 @@
 *{
   margin:0;
   padding:0;
+  box-sizing:border-box;
+  overflow-x: hidden;
+
 }
 
-body {
-  overflow-x: hidden;
-}
+
 
 
 /* ---------- NAVBAR ---------- */
@@ -57,6 +58,8 @@ body {
 
 /* ---------- HERO SECTION ---------- */
 
+
+
 .hero-section {
   min-height: 90vh; /* Reduced height */
   padding: 100px 10px 40px 10px; /* Adjusted top, bottom, left, right */
@@ -106,14 +109,7 @@ body {
   z-index: 2;
 }
 
-/* Mobile Image
-.mobile-img {
-  width: 140px;
-  position: absolute;
-  bottom: 20px;
-  right: 0;
-  z-index: 3; 
-}*/ 
+ 
 
 /* ---------- RESPONSIVE STYLES ---------- */
 
@@ -190,6 +186,9 @@ body {
     padding-right: 80px;
   }
 }
+
+
+/* ---------- HERO SECTION END ---------- */
 
 
     /* Brand Marquee Section */
@@ -793,4 +792,15 @@ body {
 
 .social-icon:hover {
   background-color: #4f46e5;
+}
+
+
+/*-----media queries-----*/
+
+@media (max-width: 576px){
+  .hero-section{
+     padding: 100px 10px 40px 10px;
+ 
+
+  }
 }
