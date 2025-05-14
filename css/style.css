@@ -16,7 +16,7 @@ html, body {
 /* ---------- NAVBAR ---------- */
 .custom-navbar {
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -133,6 +133,34 @@ html, body {
     padding-right: 80px;
   }
 }
+
+
+@media (min-width:320px) and (max-width:480px) {
+  
+.custom-navbar {
+    padding: 20px 30px;
+    top: -50px;
+    width: 100vw;
+  
+     
+  }
+
+.right_side_button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navbar-toggler-icon {
+    font-size: 20px;
+    outline: none;
+    padding-top: 2px;
+  }
+
+}
+
 
 
 /* ---------- HERO SECTION END ---------- */
@@ -840,19 +868,69 @@ html, body {
   color: white;
   text-decoration: none;
   transition: background 0.3s;
+  
 }
+ 
+.footer-social a {
+  margin: 0 2px;
+}
+
 
 .social-icon:hover {
   background-color: #4f46e5;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .header h5{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+  }
+
+ .footer-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+  .footer-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  
+
+
+  }
+.get_touch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+
+}
+
+.form-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
 
 /*-----media queries-----*/
 
-@media (max-width: 576px){
+/* @media (max-width: 576px){
   .hero-section{
      padding: 100px 10px 40px 10px;
  
 
   }
-}
+}     */ 
