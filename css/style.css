@@ -16,7 +16,7 @@ html, body {
 /* ---------- NAVBAR ---------- */
 .custom-navbar {
   position: absolute;
-  top: 30px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -586,6 +586,7 @@ html, body {
 
 /* ===  WHITE CARD  === */
 .reach-card {
+  
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -593,8 +594,11 @@ html, body {
   height: 274px;  /* fixed height */
   padding: 41px 53px;  /* padding top, right, bottom, left */
   position: absolute;
-  top: 135px;  /* specific top position */
-  left: 87px;  /* specific left position */
+   top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ /* top: 135px;  /* specific top position */
+ /* left: 70px;  specific left position */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -631,6 +635,44 @@ html, body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .our-reach-section h2 {
+    font-size: 20px;
+    top: 15px;
+  }
+  .our-reach-section {
+  background: url("/images/Rectangle 51.png") no-repeat center top / 1100px 100px;  /* fixed background width & height */
+  min-height: 268px;  /* to ensure background is not cut off on small screens */
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 180px; /* top padding for positioning the card */
+  padding-left: 87px;
+  padding-right: 86px;
+  text-align: center;
+}
+
+.reach-card {
+  
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 250px;  /* fixed width */
+  height: 80px;  /* fixed height */
+  padding: 4px 5px;  /* padding top, right, bottom, left */
+  position: absolute;
+   top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ /* top: 135px;  /* specific top position */
+ /* left: 70px;  specific left position */
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+   
+}
+
 /* === testimonial section  === */
 
 .card{
@@ -652,6 +694,13 @@ html, body {
 
 .testimonial-scroll .card {
   scroll-snap-align: start;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+  margin: 2px 4px;
+  
 }
 
 /* Decorative Dots */
@@ -666,6 +715,62 @@ html, body {
 .dot.bg-primary {
   opacity: 1;
 }
+
+@media (min-width:320px) and (max-width:480px) {
+  
+  /* .card{
+  padding: 0 5px;
+} */
+
+
+ .testimonial-section {
+  margin-top: 0px;
+  background-color: #f8f9fa;
+  border-radius: 50px;
+}
+
+.testimonial-scroll {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+   /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+
+}
+.testimonial-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.testimonial-scroll .card {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+  margin: 2px 25px;
+  
+}
+
+/* Decorative Dots */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.dot.bg-primary {
+  opacity: 1;
+}
+
+
+}
+
+
+
 
 
 /* faq section */
