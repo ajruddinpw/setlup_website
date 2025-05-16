@@ -196,10 +196,23 @@ html, body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
+
+  @media (min-width:320px) and (max-width:480px) {
+    .brand-marquee {
+       animation: scrollLeft 2s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     flex-direction: row; 
+    }
   
+
+
+
+  }
   /* Community Heading Section */
 .community-heading {
     background-color: #f9f9f9; /* Optional: Light background */
@@ -282,6 +295,13 @@ html, body {
 }
 
 /* Media Queries for Responsive Typography */
+@media (min-width: 320px) and (max-width: 480px) {
+  .feature-box h5 {
+margin-bottom: 30px;
+  }
+
+
+}
 @media (min-width: 480px) {
   .feature-box h5 {
     font-size: 1.2rem;
@@ -359,10 +379,10 @@ html, body {
 /* Circle Icon + Number */
 .icon-box {
   padding: 95px 84px 72px 83px; /* top, right, bottom, left */
-  position: relative
-                                 
+  position: relative;
 }
 
+/* This part stays the same */
 .icon-circle {
   background-color: #fff;
   border-radius: 50%;
@@ -373,14 +393,12 @@ html, body {
   align-items: center;
   justify-content: center;
   position: relative;
-  
 }
 
 .icon-circle img {
   width: 48px;
   height: 48px;
   object-fit: contain;
-  
 }
 
 /* Number Badge */
@@ -402,7 +420,34 @@ html, body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* NEW: Add spacing logic for reversed layout */
+.d-flex.flex-row-reverse .icon-box {
+  margin-left: 1rem; /* space between icon and text on reverse */
+  margin-right: 0;
+}
+
+.d-flex:not(.flex-row-reverse) .icon-box {
+  margin-right: 1rem; /* space between icon and text normally */
+  margin-left: 0;
+}
+
 /* Responsive */
+@media (min-width:320px) and (max-width: 480px) {
+
+   .network {
+  padding-bottom: 100px;
+ }  
+
+  
+
+
+}
+
+
+
+
+
+
 @media (max-width: 767.98px) {
   .rocket-img {
     max-width: 200px;
@@ -410,20 +455,17 @@ html, body {
 
   .icon-box {
     padding: 60px 30px;
-    top:-50px;
+    top: -50px;
   }
 
   .icon-circle {
     width: 80px;
     height: 80px;
-  
   }
 
   .icon-circle img {
     width: 40px;
     height: 40px;
-    
-    
   }
 
   .number-badge {
@@ -433,7 +475,19 @@ html, body {
     top: 50px;
     left: 30px;
   }
+
+  /* NEW: Stack icons and text vertically for small screens */
+  .d-flex.flex-row-reverse,
+  .d-flex {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .d-flex .icon-box {
+    margin: 0 auto 1rem auto;
+  }
 }
+
 /* How It Works Section */
 .icon-wrapper {
   /* width: 50px;
@@ -446,8 +500,8 @@ html, body {
 
   background-color: #fff;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.03);
   display: flex;
   align-items: center;
@@ -465,6 +519,54 @@ html, body {
     font-size: 1rem;
   }
 }
+
+@media (min-width:320px) and (max-width: 480px) {
+
+
+
+
+
+  .icon-wrapper {
+  width: 60px;              /* adjust size as needed */
+  height: 60px;
+  display: flex;
+  justify-content: center;  /* horizontally center */
+  align-items: center;      /* vertically center */
+  background-color: #f0f0f0; /* optional background */
+  margin: 0 auto;
+}
+
+.icon-wrapper img {
+  max-width: 60%;   /* or 100% as needed */
+  height: auto;
+}
+
+
+
+
+
+ .feature1{
+  padding-left: 130px;
+  
+ }
+ .feature2{
+  padding-left: 130px;
+  padding-top: 30px;
+ }
+
+  .feature3{
+    padding-left: 130px;
+    padding-top: 30px;
+  }
+
+  .overview{
+    margin-left: 50px;
+    padding-top: 30px;
+  }
+
+
+
+  }
 
 /* ===============================
    Feature Section Styles
@@ -753,50 +855,60 @@ html, body {
   padding: 0 5px;
 } */
 
+  .testimonial-section {
+    margin-top: -30px;
+  }
 
- .testimonial-section {
-  margin-top: 0px;
-  background-color: #f8f9fa;
-  border-radius: 50px;
-}
+ .testimonial-scroll {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.testimonial-scroll {
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-   /* Hide scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  .testimonial-scroll .card {
+    flex: 0 0 auto !important;
+    min-width: 300px !important;
+    max-width: 350px !important;
+    scroll-snap-align: start;
+  }
 
-}
-.testimonial-scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
+  /* Optional: scroll indicator styling */
+  .testimonial-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
 
-.testimonial-scroll .card {
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* padding: 20px; */
-  margin: 2px 25px;
-  
-}
+  .testimonial-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
 
-/* Decorative Dots */
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.6;
-}
+  /* Dots styling below the scroll area */
+   /* Dots container layout */
+  .testimonial-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
 
-.dot.bg-primary {
-  opacity: 1;
-}
+  /* Individual dot styling */
+  .testimonial-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display:inline-block
+  }
 
+ 
+
+ 
 
 }
 
@@ -905,6 +1017,7 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    flex-direction: row !important;
   
 
 
