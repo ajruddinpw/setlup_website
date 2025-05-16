@@ -175,7 +175,7 @@ html, body {
   }
   
   .brand-marquee {
-    animation: scrollLeft 25s linear infinite;
+    animation: scrollLeft 5s linear infinite;
     display: inline-flex;
     align-items: center;
   }
@@ -448,11 +448,13 @@ html, body {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.03);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%); /* Safari support */
 }
 
 @media (max-width: 768px) {
@@ -476,6 +478,7 @@ html, body {
   width: 50px;
   height: 50px;
   object-fit: contain;
+  
 }
 
 .feature-title {
@@ -923,7 +926,7 @@ html, body {
 
 
 
-
+}
 
 /*-----media queries-----*/
 
